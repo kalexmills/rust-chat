@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: slack
+  namespace: scratch
+spec:
+  containers:
+  - name: slack
+    image: gcr.io/s5s-big-hot-k8s/slack:alex_manual
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 6142
